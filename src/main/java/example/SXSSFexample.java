@@ -37,6 +37,8 @@ public class SXSSFexample {
     FileOutputStream out = new FileOutputStream("tempsxssf.xlsx");
     wb.write(out);
     out.close();
+    // dispose of temporary files backing this workbook on disk
+    wb.dispose();
 }
 
 }
